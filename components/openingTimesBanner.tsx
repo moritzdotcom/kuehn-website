@@ -5,7 +5,7 @@ export default function OpeningTimesBanner() {
   const [open, setOpen] = useState(false);
 
   return (
-    <div className="bg-secondary text-white py-1">
+    <div className="bg-secondary text-white py-2">
       <div className="md:hidden">
         <button
           className="flex justify-center items-center gap-2 mx-auto"

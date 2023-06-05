@@ -22,7 +22,7 @@ export default function Navbar() {
           <BurgerMenuBtn open={menuOpen} />
         </button>
       </div>
-      <div className="hidden md:flex items-center justify-between gap-4">
+      <div className="hidden md:flex items-center justify-between gap-5">
         <Link
           href="/services"
           className="text-sm font-semibold text-primary hover:text-secondary hover:underline underline-offset-4"
