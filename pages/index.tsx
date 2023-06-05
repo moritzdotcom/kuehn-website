@@ -5,6 +5,8 @@ import Logo from '@/public/images/Logo.png';
 import WelcomeDesktop from '@/public/images/welcomeDesktop.jpg';
 import WelcomeMobile from '@/public/images/welcomeMobile.jpg';
 import Link from 'next/link';
+import SlideShow from '@/components/slideShow';
+import ServicesSlider from '@/components/servicesSlider';
 
 export default function Home() {
   const title = 'Praxis Dr. Wolfram Kühn';
@@ -166,7 +168,21 @@ export default function Home() {
             Gesundheitsamt melden.
           </p>
         </div>
-        <main className="my-9"></main>
+        <div className="pt-5 sm:pt-10">
+          <h2 className="text-center text-2xl sm:text-4xl text-primary">
+            Unsere Praxis
+          </h2>
+          <div className="mt-5 sm:mt-10">
+            <SlideShow />
+          </div>
+        </div>
+        <div className="py-5 relative">
+          <div id="services" className="-mt-20 absolute top-0" />
+          <h2 className="text-center text-2xl sm:text-4xl text-primary">
+            Unsere Leistungen
+          </h2>
+          <ServicesSlider />
+        </div>
       </div>
     </>
   );
