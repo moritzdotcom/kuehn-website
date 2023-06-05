@@ -1,3 +1,4 @@
+import OpeningTimesBanner from '@/components/openingTimesBanner';
 import Head from 'next/head';
 
 export default function Home() {
@@ -30,6 +31,7 @@ export default function Home() {
         <meta property="og:url" content={url} />
       </Head>
       <div>
+        <OpeningTimesBanner />
         <header></header>
         <main className="my-9"></main>
       </div>
