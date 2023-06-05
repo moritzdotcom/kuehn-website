@@ -10,11 +10,15 @@ export default function Navbar() {
   return (
     <nav className="flex items-center justify-between bg-white w-full sticky top-0 py-5 md:py-3 shadow-lg px-3 z-50 overflow-x-hidden">
       <div className="flex items-center justify-between md:justify-start gap-3 w-full md:w-auto">
-        <Image src={Icon} alt="Logo" width={45} height={45} />
-        <h5 className="text-xs md:text-sm font-semibold text-primary">
-          Facharztpraxis für Hals-, <br />
-          Nasen-, Ohrenheilkunde
-        </h5>
+        <Link href="/">
+          <Image src={Icon} alt="Logo" width={45} height={45} />
+        </Link>
+        <Link href="/">
+          <h5 className="text-xs md:text-sm font-semibold text-primary">
+            Facharztpraxis für Hals-, <br />
+            Nasen-, Ohrenheilkunde
+          </h5>
+        </Link>
         <button
           onClick={() => setMenuOpen((o) => !o)}
           className="block md:hidden"
@@ -22,28 +26,28 @@ export default function Navbar() {
           <BurgerMenuBtn open={menuOpen} />
         </button>
       </div>
-      <div className="hidden md:flex items-center justify-between gap-5">
+      <div className="hidden md:flex items-center justify-between gap-5 font-semibold text-primary">
         <Link
           href="/services"
-          className="text-sm font-semibold text-primary hover:text-secondary hover:underline underline-offset-4"
+          className="hover:text-secondary hover:underline underline-offset-4"
         >
           Leistungen
         </Link>
         <Link
           href="/specialization"
-          className="text-sm font-semibold text-primary hover:text-secondary hover:underline underline-offset-4"
+          className="hover:text-secondary hover:underline underline-offset-4"
         >
           Spezialisierung
         </Link>
         <Link
           href="/praxis"
-          className="text-sm font-semibold text-primary hover:text-secondary hover:underline underline-offset-4"
+          className="hover:text-secondary hover:underline underline-offset-4"
         >
           Praxis
         </Link>
         <Link
           href="/team"
-          className="text-sm font-semibold text-primary hover:text-secondary hover:underline underline-offset-4"
+          className="hover:text-secondary hover:underline underline-offset-4"
         >
           Team
         </Link>
