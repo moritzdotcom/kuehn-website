@@ -8,7 +8,7 @@ export default function Navbar() {
   const [menuOpen, setMenuOpen] = useState(false);
 
   return (
-    <nav className="flex items-center justify-between bg-white w-full sticky top-0 py-5 md:py-3 shadow-lg px-3 z-50">
+    <nav className="flex items-center justify-between bg-white w-full sticky top-0 py-5 md:py-3 shadow-lg px-3 z-50 overflow-x-hidden">
       <div className="flex items-center justify-between md:justify-start gap-3 w-full md:w-auto">
         <Image src={Icon} alt="Logo" width={45} height={45} />
         <h5 className="text-xs md:text-sm font-semibold text-primary">
