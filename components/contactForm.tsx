@@ -88,7 +88,7 @@ export default function ContactForm() {
 
   return (
     <div className="flex flex-col lg:flex-row lg:rounded-lg lg:shadow-xl lg:overflow-hidden">
-      <div className="bg-gradient-to-r from-primary to-secondary text-white w-full lg:w-1/3 p-3 pb-10 lg:pb-0">
+      <div className="bg-gradient text-white w-full lg:w-1/3 p-3 pb-10 lg:pb-0">
         <p className="font-semibold text-2xl text-center lg:text-start mb-6">
           Kontaktaufnahme
         </p>
@@ -175,7 +175,7 @@ export default function ContactForm() {
             <button
               type="submit"
               disabled={loading}
-              className="bg-gradient-to-br from-primary to-secondary disabled:opacity-50 disabled:cursor-not-allowed text-white font-bold disabled:font-normal py-2 px-4 mt-3 rounded lg:self-end"
+              className="bg-gradient disabled:opacity-50 disabled:cursor-not-allowed text-white font-bold disabled:font-normal py-2 px-4 mt-3 rounded lg:self-end"
             >
               {loading ? (
                 <>

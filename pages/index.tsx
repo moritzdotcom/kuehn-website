@@ -54,7 +54,7 @@ export default function Home() {
             </h2>
             <Link
               href="/#services"
-              className="block w-fit mt-8 bg-primary text-white rounded px-4 py-3 text-lg"
+              className="block w-fit mt-8 bg-gradient text-white rounded px-4 py-3 text-lg"
             >
               Wie wir Ihnen helfen können
             </Link>
@@ -101,7 +101,7 @@ export default function Home() {
             </div>
           </div>
         </div>
-        <div className="w-full bg-gradient-to-r from-primary to-secondary text-white sm:-mt-36 sm:pt-36 sm:-mb-24 sm:pb-24">
+        <div className="w-full bg-gradient text-white sm:-mt-36 sm:pt-36 sm:-mb-24 sm:pb-24">
           <div className="max-w-5xl mx-auto px-3 py-5 sm:py-20 flex flex-col gap-6 sm:gap-10">
             <h2 className="text-2xl font-semibold text-center">
               Terminsprechstunde
@@ -227,7 +227,8 @@ export default function Home() {
             ></iframe>
           </div>
         </div>
-        <div className="sm:py-10 max-w-screen-lg mx-auto">
+        <div className="sm:py-10 max-w-screen-lg mx-auto relative">
+          <div id="contact" className="-mt-20 absolute top-0" />
           <ContactForm />
         </div>
       </div>

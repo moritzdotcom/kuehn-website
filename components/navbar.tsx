@@ -27,10 +27,10 @@ export default function Navbar() {
         }`}
       >
         <div className="flex items-center justify-between md:justify-start gap-3 w-full md:w-auto">
-          <Link href="/">
+          <Link href="/" onClick={() => setMenuOpen(false)}>
             <Image src={Icon} alt="Logo" width={45} height={45} />
           </Link>
-          <Link href="/">
+          <Link href="/" onClick={() => setMenuOpen(false)}>
             <h5 className="text-xs md:text-sm font-semibold text-primary">
               Facharztpraxis für Hals-, <br />
               Nasen-, Ohrenheilkunde
@@ -45,7 +45,7 @@ export default function Navbar() {
         </div>
         <div className="hidden md:flex items-center justify-between gap-5 font-semibold text-primary">
           <Link
-            href="/services"
+            href="#services"
             className="hover:text-secondary hover:underline underline-offset-4"
           >
             Leistungen
@@ -71,20 +71,21 @@ export default function Navbar() {
         </div>
         <Link
           href="#contact"
-          className="bg-primary text-white pl-3 pr-4 py-3 rounded-lg text-sm font-semibold hidden md:flex items-center gap-2 hover:bg-secondary"
+          className="bg-gradient text-white pl-3 pr-4 py-3 rounded-lg text-sm font-semibold hidden md:flex items-center gap-2 hover:bg-secondary"
         >
           <FaPhoneAlt className="text-base rotate-6" />
           Kontakt
         </Link>
         <div
-          className={`absolute bottom-0 translate-y-full transition-transform left-0 bg-primary text-white w-full z-40 block md:hidden ${
+          className={`absolute bottom-0 translate-y-full transition-transform left-0 bg-gradient text-white w-full z-40 block md:hidden ${
             menuOpen ? 'translate-x-0' : 'translate-x-full'
           }`}
         >
-          <div className="flex flex-col px-3 py-5 gap-4 items-center">
+          <div className="flex flex-col px-3 py-5 gap-4 items-start">
             <Link
-              href="/services"
-              className={`w-full text-center transition-opacity ${
+              href="#services"
+              onClick={() => setMenuOpen(false)}
+              className={`w-full text-start transition-opacity ${
                 menuOpen
                   ? 'opacity-100 duration-500 delay-[200ms]'
                   : 'opacity-0 duration-0 delay-200'
@@ -93,7 +94,7 @@ export default function Navbar() {
               Leistungen
             </Link>
             <div
-              className={`bg-white w-20 h-px rounded transition-opacity ${
+              className={`bg-white w-full h-px rounded transition-opacity ${
                 menuOpen
                   ? 'opacity-100 duration-500 delay-[300ms]'
                   : 'opacity-0 duration-0 delay-200'
@@ -101,7 +102,8 @@ export default function Navbar() {
             />
             <Link
               href="/specialization"
-              className={`w-full text-center transition-opacity ${
+              onClick={() => setMenuOpen(false)}
+              className={`w-full text-start transition-opacity ${
                 menuOpen
                   ? 'opacity-100 duration-500 delay-[400ms]'
                   : 'opacity-0 duration-0 delay-200'
@@ -110,7 +112,7 @@ export default function Navbar() {
               Spezialisierung
             </Link>
             <div
-              className={`bg-white w-20 h-px rounded transition-opacity ${
+              className={`bg-white w-full h-px rounded transition-opacity ${
                 menuOpen
                   ? 'opacity-100 duration-500 delay-[500ms]'
                   : 'opacity-0 duration-0 delay-200'
@@ -118,7 +120,8 @@ export default function Navbar() {
             />
             <Link
               href="/praxis"
-              className={`w-full text-center transition-opacity ${
+              onClick={() => setMenuOpen(false)}
+              className={`w-full text-start transition-opacity ${
                 menuOpen
                   ? 'opacity-100 duration-500 delay-[600ms]'
                   : 'opacity-0 duration-0 delay-200'
@@ -127,7 +130,7 @@ export default function Navbar() {
               Praxis
             </Link>
             <div
-              className={`bg-white w-20 h-px rounded transition-opacity ${
+              className={`bg-white w-full h-px rounded transition-opacity ${
                 menuOpen
                   ? 'opacity-100 duration-500 delay-[700ms]'
                   : 'opacity-0 duration-0 delay-200'
@@ -135,13 +138,32 @@ export default function Navbar() {
             />
             <Link
               href="/team"
-              className={`w-full text-center transition-opacity ${
+              onClick={() => setMenuOpen(false)}
+              className={`w-full text-start transition-opacity ${
                 menuOpen
                   ? 'opacity-100 duration-500 delay-[800ms]'
                   : 'opacity-0 duration-0 delay-200'
               }`}
             >
               Team
+            </Link>
+            <div
+              className={`bg-white w-full h-px rounded transition-opacity ${
+                menuOpen
+                  ? 'opacity-100 duration-500 delay-[900ms]'
+                  : 'opacity-0 duration-0 delay-200'
+              }`}
+            />
+            <Link
+              href="#contact"
+              onClick={() => setMenuOpen(false)}
+              className={`w-full text-start transition-opacity ${
+                menuOpen
+                  ? 'opacity-100 duration-500 delay-[1000ms]'
+                  : 'opacity-0 duration-0 delay-200'
+              }`}
+            >
+              Kontakt
             </Link>
           </div>
         </div>
