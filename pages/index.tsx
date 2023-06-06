@@ -9,6 +9,7 @@ import SlideShow from '@/components/slideShow';
 import ServicesSlider from '@/components/servicesSlider';
 import { FaBus, FaCar } from 'react-icons/fa';
 import { IoMdTrain } from 'react-icons/io';
+import ContactForm from '@/components/contactForm';
 
 export default function Home() {
   const title = 'Praxis Dr. Wolfram Kühn';
@@ -101,7 +102,7 @@ export default function Home() {
           </div>
         </div>
         <div className="w-full bg-gradient-to-r from-primary to-secondary text-white sm:-mt-36 sm:pt-36 sm:-mb-24 sm:pb-24">
-          <div className="max-w-5xl mx-auto px-3 py-5 flex flex-col gap-6 sm:gap-10">
+          <div className="max-w-5xl mx-auto px-3 py-5 sm:py-20 flex flex-col gap-6 sm:gap-10">
             <h2 className="text-2xl font-semibold text-center">
               Terminsprechstunde
             </h2>
@@ -225,6 +226,9 @@ export default function Home() {
               referrerPolicy="no-referrer-when-downgrade"
             ></iframe>
           </div>
+        </div>
+        <div className="sm:py-10 max-w-screen-lg mx-auto">
+          <ContactForm />
         </div>
       </div>
     </>
