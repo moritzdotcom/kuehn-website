@@ -7,6 +7,8 @@ import WelcomeMobile from '@/public/images/welcomeMobile.jpg';
 import Link from 'next/link';
 import SlideShow from '@/components/slideShow';
 import ServicesSlider from '@/components/servicesSlider';
+import { FaBus, FaCar } from 'react-icons/fa';
+import { IoMdTrain } from 'react-icons/io';
 
 export default function Home() {
   const title = 'Praxis Dr. Wolfram Kühn';
@@ -182,6 +184,47 @@ export default function Home() {
             Unsere Leistungen
           </h2>
           <ServicesSlider />
+        </div>
+        <div className="flex flex-col sm:flex-row-reverse">
+          <div className="bg-tertiary w-full sm:w-2/5 p-3 sm:p-6 text-primary font-semibold">
+            <h3 className="text-xl sm:text-3xl text-center sm:text-start">
+              Anfahrt
+            </h3>
+            <p>
+              Unsere Praxis ist mit dem Auto sowie mit dem ÖPNV bestens zu
+              erreichen. Es befinden sich kostenlose Parkmöglichkeiten vor Ort.
+            </p>
+            <div className="my-5 flex flex-col gap-5">
+              <div className="flex items-center gap-2">
+                <div className="p-2 rounded-full bg-primary">
+                  <FaCar className="text-white text-2xl" />
+                </div>
+                <p>Lindenstraße 260, 41063 Mönchengladbach</p>
+              </div>
+              <div className="flex items-center gap-2">
+                <div className="p-2 rounded-full bg-primary">
+                  <IoMdTrain className="text-white text-2xl" />
+                </div>
+                <p>Bahn: Mönchengladbach Hbf</p>
+              </div>
+              <div className="flex items-center gap-2">
+                <div className="p-2 rounded-full bg-primary">
+                  <FaBus className="text-white text-2xl" />
+                </div>
+                <p>Bus: Mönchengladbach Annakirchstr.</p>
+              </div>
+            </div>
+          </div>
+          <div className="w-full sm:w-3/5">
+            <iframe
+              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d624.9565373166943!2d6.412308869674409!3d51.203855038505196!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47b8ab7034154101%3A0xe968cf6df7fcc489!2sHNO%20Facharztpraxis%20in%20M%C3%B6nchengladbach%20Dr.med.%20Wolfram%20Peter%20K%C3%BChn%2C%20Dr.med.%20Aline%20Paulu%C3%9Fen%20(angest.%C3%84rztin)!5e0!3m2!1sde!2sde!4v1686036092678!5m2!1sde!2sde"
+              width="100%"
+              height="100%"
+              style={{ border: 0, minHeight: '400px' }}
+              loading="lazy"
+              referrerPolicy="no-referrer-when-downgrade"
+            ></iframe>
+          </div>
         </div>
       </div>
     </>

@@ -13,6 +13,7 @@ export default function SlideShow() {
     <div>
       <Carousel
         showStatus={false}
+        showThumbs={false}
         infiniteLoop
         centerMode
         centerSlidePercentage={66}
