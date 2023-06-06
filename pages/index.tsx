@@ -45,7 +45,7 @@ export default function Home() {
         <header className="flex flex-col sm:flex-row-reverse items-center justify-center gap-1 sm:gap-5 bg-gray-100 px-3 py-5">
           <Image src={Logo} alt="Logo" className="w-full max-w-xs" />
           <div className="max-w-xl text-center sm:text-start flex flex-col items-center sm:items-start">
-            <h1 className="font-bold text-xl sm:text-4xl">
+            <h1 className="font-bold text-xl sm:text-4xl text-primary">
               Facharztpraxis für Hals-, Nasen- Ohrenheilkunde in
               Mönchengladbach-Windberg.
             </h1>
@@ -74,7 +74,7 @@ export default function Home() {
                 className="object-cover block sm:hidden max-h-60 w-full h-full"
               />
             </div>
-            <div className="px-0 sm:px-5 py-2 sm:py-5 sm:w-2/3 flex flex-col gap-2.5 text-sm text-primary font-semibold">
+            <div className="px-0 sm:px-5 py-2 sm:py-5 sm:w-2/3 flex flex-col gap-2.5 text-sm md:text-base text-primary font-semibold">
               <p>
                 Liebe Patientinnen und Patienten,
                 <br /> schön, dass Sie zu uns gefunden haben.
