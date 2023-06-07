@@ -1,7 +1,7 @@
 import OpeningTimesBanner from '@/components/openingTimesBanner';
 import Head from 'next/head';
 import Image from 'next/image';
-import Logo from '@/public/images/Logo.png';
+import Logo from '@/public/Icon.svg';
 import WelcomeDesktop from '@/public/images/welcomeDesktop.jpg';
 import WelcomeMobile from '@/public/images/welcomeMobile.jpg';
 import Link from 'next/link';
@@ -45,12 +45,11 @@ export default function Home() {
         <header className="flex flex-col sm:flex-row-reverse items-center justify-center gap-1 sm:gap-5 bg-gray-100 px-3 py-5">
           <Image src={Logo} alt="Logo" className="w-full max-w-xs" />
           <div className="max-w-xl text-center sm:text-start flex flex-col items-center sm:items-start">
-            <h1 className="font-bold text-xl sm:text-4xl text-primary">
-              Facharztpraxis für Hals-, Nasen- Ohrenheilkunde in
-              Mönchengladbach-Windberg.
+            <h1 className="font-bold text-2xl sm:text-4xl text-primary">
+              Facharztpraxis für Hals-, Nasen- Ohrenheilkunde
             </h1>
             <h2 className="text-gray-500 font-semibold text-lg sm:text-2xl mt-5">
-              Medizinische Fachkompetenz seit 1997
+              in Mönchengladbach-Windberg.
             </h2>
             <Link
               href="/#services"

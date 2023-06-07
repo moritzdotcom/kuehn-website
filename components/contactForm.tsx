@@ -105,7 +105,9 @@ export default function ContactForm() {
         </a>
       </div>
       <div className="w-full lg:w-2/3 p-3">
-        <p className="font-bold text-xl text-primary">Kontaktformular</p>
+        <p className="font-semibold text-2xl text-center lg:text-start text-primary">
+          Kontaktformular
+        </p>
         <form
           onSubmit={handleSubmit}
           className="flex flex-col gap-3 mt-3 text-primary"
