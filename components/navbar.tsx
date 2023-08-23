@@ -2,12 +2,14 @@ import Image from 'next/image';
 import Icon from '../public/Icon.svg';
 import Link from 'next/link';
 import { FaPhoneAlt } from 'react-icons/fa';
-import { useEffect, useState } from 'react';
+import { ReactNode, useEffect, useState } from 'react';
 import ClickAwayListener from 'react-click-away-listener';
+import { useRouter } from 'next/router';
 
 export default function Navbar() {
   const [menuOpen, setMenuOpen] = useState(false);
   const [showOverflow, setShowOverflow] = useState(false);
+  const router = useRouter();
 
   useEffect(() => {
     if (menuOpen) {
@@ -44,30 +46,18 @@ export default function Navbar() {
           </button>
         </div>
         <div className="hidden md:flex items-center justify-between gap-5 font-semibold text-primary">
-          <Link
-            href="/#services"
-            className="hover:text-secondary hover:underline underline-offset-4"
-          >
+          <NavLink href="/#services" path={router.asPath}>
             Leistungen
-          </Link>
-          <Link
-            href="/specialization"
-            className="hover:text-secondary hover:underline underline-offset-4"
-          >
+          </NavLink>
+          <NavLink href="/specialization" path={router.asPath}>
             Spezialisierung
-          </Link>
-          <Link
-            href="/#praxis"
-            className="hover:text-secondary hover:underline underline-offset-4"
-          >
+          </NavLink>
+          <NavLink href="/#praxis" path={router.asPath}>
             Praxis
-          </Link>
-          <Link
-            href="/team"
-            className="hover:text-secondary hover:underline underline-offset-4"
-          >
+          </NavLink>
+          <NavLink href="/team" path={router.asPath}>
             Team
-          </Link>
+          </NavLink>
         </div>
         <Link
           href="/#contact"
@@ -191,5 +181,27 @@ function BurgerMenuBtn({ open }: { open: boolean }) {
         }`}
       />
     </div>
+  );
+}
+
+function NavLink({
+  href,
+  children,
+  path,
+}: {
+  href: string;
+  children: ReactNode;
+  path: string;
+}) {
+  const isActive = path === href;
+
+  const className = isActive
+    ? 'text-secondary underline underline-offset-4'
+    : 'hover:text-secondary hover:underline underline-offset-4';
+
+  return (
+    <Link href={href} className={className}>
+      {children}
+    </Link>
   );
 }
