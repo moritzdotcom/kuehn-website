@@ -3,5 +3,5 @@
 @tailwind utilities;
 
 .bg-gradient {
-  @apply bg-gradient-to-r from-primary to-secondary;
+  @apply bg-gradient-to-r from-tertiary to-blue-100;
 }

@@ -1,10 +1,8 @@
 import OpeningTimesBanner from '@/components/openingTimesBanner';
 import Head from 'next/head';
 import Image from 'next/image';
-import Logo from '@/public/Icon.svg';
 import WelcomeDesktop from '@/public/images/welcomeDesktop.jpg';
 import WelcomeMobile from '@/public/images/welcomeMobile.jpg';
-import Link from 'next/link';
 import SlideShow from '@/components/slideShow';
 import ServicesSlider from '@/components/servicesSlider';
 import { FaBus, FaCar } from 'react-icons/fa';
@@ -42,99 +40,98 @@ export default function Home() {
       </Head>
       <div>
         <OpeningTimesBanner />
-        <header className="flex flex-col sm:flex-row-reverse items-center justify-center gap-1 sm:gap-5 bg-gray-100 px-3 py-5">
-          <Image src={Logo} alt="Logo" className="w-full max-w-xs" />
-          <div className="max-w-xl text-center sm:text-start flex flex-col items-center sm:items-start">
-            <h1 className="font-bold text-2xl sm:text-4xl text-primary">
-              Facharztpraxis für Hals-, Nasen- Ohrenheilkunde
-            </h1>
-            <h2 className="text-gray-500 font-semibold text-lg sm:text-2xl mt-5">
-              in Mönchengladbach-Windberg.
-            </h2>
-            <Link
-              href="/#services"
-              className="block w-fit mt-8 bg-gradient text-white rounded px-4 py-3 text-lg"
-            >
-              Wie wir Ihnen helfen können
-            </Link>
-          </div>
-        </header>
-        <div className="sm:bg-gray-100 px-3 py-2">
-          <div className="bg-white w-full max-w-5xl mx-auto flex flex-col sm:flex-row items-center rounded-lg sm:shadow-lg overflow-hidden relative">
-            <div className="w-full sm:w-1/3">
-              <Image
-                src={WelcomeDesktop}
-                alt="Welcome"
-                className="object-cover hidden sm:block w-full h-full"
-              />
-              <Image
-                src={WelcomeMobile}
-                alt="Welcome"
-                className="object-cover block sm:hidden max-h-60 w-full h-full"
-              />
+        <div
+          className="bg-cover bg-center relative z-10"
+          style={{ backgroundImage: 'url(/images/services/ears.jpg)' }}
+        >
+          <div className="bg-white bg-opacity-70 absolute inset-0 -z-10"></div>
+          <header className="flex flex-col sm:flex-row-reverse items-center justify-center gap-1 sm:gap-5 px-3 py-5 z-30">
+            <div className="max-w-xl text-center sm:text-start flex flex-col items-center sm:items-start my-4 sm:my-12">
+              <h1 className="font-bold text-xl sm:text-4xl text-primary">
+                Facharztpraxis für Hals-, Nasen- Ohrenheilkunde
+              </h1>
+              <h2 className="text-gray-500 font-semibold text-lg sm:text-2xl mt-5">
+                in Mönchengladbach-Windberg.
+              </h2>
             </div>
-            <div className="px-0 sm:px-5 py-2 sm:py-5 sm:w-2/3 flex flex-col gap-2.5 text-sm md:text-base text-primary font-semibold">
-              <p>
-                Liebe Patientinnen und Patienten,
-                <br /> schön, dass Sie zu uns gefunden haben.
-              </p>
-              <p>
-                Wir sind eine Facharztpraxis für Hals-, Nasen- und
-                Ohrenheilkunde in Mönchengladbach-Windberg. Es erwarten Sie zwei
-                erfahrene HNO Fachärzte und ein engagiertes Praxisteam.
-              </p>
-              <p>
-                Dr. med. Wolfram Kühn, eröffnete diese Praxis bereits 1997 und
-                folgte damit dem Ruf einer langen Familientradition und der
-                Leidenschaft für das Fachgebiet HNO.
-              </p>
-              <p>
-                Seit April 2020 wird die Praxis zusätzlich durch seine
-                kompetente Kollegin, Dr. med. Aline Paulußen, unterstützt.
-              </p>
-              <p>Wir freuen uns auf Ihren Besuch!</p>
-              <p>
-                Dr. med. Wolfram Peter Kühn & Dr. med. Aline Paulußen
-                <br />
-              </p>
+          </header>
+          <div className="px-3 py-2 z-30">
+            <div className="bg-white w-full max-w-5xl mx-auto flex flex-col sm:flex-row items-center rounded-lg sm:shadow-lg overflow-hidden relative">
+              <div className="w-full sm:w-1/3 h-full">
+                <Image
+                  src={WelcomeDesktop}
+                  alt="Welcome"
+                  className="object-cover hidden sm:block w-full h-full"
+                />
+                <Image
+                  src={WelcomeMobile}
+                  alt="Welcome"
+                  className="object-cover block sm:hidden max-h-60 w-full h-full"
+                />
+              </div>
+              <div className="px-2 sm:px-5 py-2 sm:py-5 sm:w-2/3 flex flex-col gap-2.5 text-sm md:text-base text-gray-700 font-semibold">
+                <p>
+                  Liebe Patientinnen, liebe Patienten,
+                  <br /> Herzlich willkommen auf der Internetseite unserer
+                  HNO-Praxis!
+                </p>
+                <p>
+                  Unser Team besteht aus zwei erfahrenen HNO-Fachärzten und
+                  einem engagierten Praxisteam. Wir legen großen Wert auf eine
+                  persönliche und einfühlsame Betreuung, um Ihre individuellen
+                  Bedürfnisse bestmöglich zu erfüllen.
+                </p>
+                <p>
+                  Unser oberstes Ziel ist es, Ihnen eine umfassende und
+                  qualitativ hochwertige Versorgung in allen Bereichen der
+                  Hals-Nasen-Ohren-Heilkunde zu bieten. Hierbei stehen modernste
+                  und schonende Diagnostik- und Therapieverfahren im Fokus.
+                </p>
+                <p>Wir freuen uns auf Ihren Besuch!</p>
+                <p>
+                  Dr. med. Wolfram Kühn, Dr. med. Aline Paulussen und das
+                  Praxisteam Kühn
+                  <br />
+                </p>
+              </div>
             </div>
           </div>
         </div>
-        <div className="w-full bg-gradient text-white sm:-mt-36 sm:pt-36 sm:-mb-24 sm:pb-24">
+        <div className="w-full bg-gradient text-gray-900 sm:-mt-36 sm:pt-36 sm:-mb-24 sm:pb-24">
           <div className="max-w-5xl mx-auto px-3 py-5 sm:py-20 flex flex-col gap-6 sm:gap-10">
             <h2 className="text-2xl font-semibold text-center">
               Terminsprechstunde
             </h2>
-            <div className="flex flex-col sm:flex-row justify-between text-center gap-3 text-gray-200">
+            <div className="flex flex-col sm:flex-row justify-between text-center gap-3 text-gray-700">
               <div className="flex sm:flex-col gap-3 justify-between sm:justify-start items-center">
-                <h6 className="font-semibold text-white">Montag</h6>
+                <h6 className="font-semibold text-gray-900">Montag</h6>
                 <div>
                   <p>8:30 - 12:00 Uhr</p>
                   <p>14:30 - 18:00 Uhr</p>
                 </div>
               </div>
               <div className="flex sm:flex-col gap-3 justify-between sm:justify-start items-center">
-                <h6 className="font-semibold text-white">Dienstag</h6>
+                <h6 className="font-semibold text-gray-900">Dienstag</h6>
                 <div>
                   <p>8:30 - 12:00 Uhr</p>
                   <p>14:30 - 18:00 Uhr</p>
                 </div>
               </div>
               <div className="flex sm:flex-col gap-3 justify-between sm:justify-start items-center">
-                <h6 className="font-semibold text-white">Mittwoch</h6>
+                <h6 className="font-semibold text-gray-900">Mittwoch</h6>
                 <div>
                   <p>8:30 - 12:00 Uhr</p>
                 </div>
               </div>
               <div className="flex sm:flex-col gap-3 justify-between sm:justify-start items-center">
-                <h6 className="font-semibold text-white">Donnerstag</h6>
+                <h6 className="font-semibold text-gray-900">Donnerstag</h6>
                 <div>
                   <p>8:30 - 12:00 Uhr</p>
                   <p>14:30 - 18:00 Uhr</p>
                 </div>
               </div>
               <div className="flex sm:flex-col gap-3 justify-between sm:justify-start items-center">
-                <h6 className="font-semibold text-white">Freitag</h6>
+                <h6 className="font-semibold text-gray-900">Freitag</h6>
                 <div>
                   <p>8:30 - 12:00 Uhr</p>
                 </div>
@@ -147,7 +144,7 @@ export default function Home() {
             </h5>
           </div>
         </div>
-        <div className="bg-gray-200 sm:rounded-lg sm:shadow-lg w-full max-w-5xl mx-auto flex flex-col gap-4 sm:gap-6 text-center text-sm sm:text-base px-3 py-5">
+        <div className="bg-gray-100 sm:rounded-lg sm:shadow-lg w-full max-w-5xl mx-auto flex flex-col gap-4 sm:gap-6 text-center text-sm sm:text-base px-3 py-5">
           <p>
             In dringenden Fällen außerhalb der Sprechstundenzeiten erreichen Sie
             unter{' '}
@@ -170,12 +167,33 @@ export default function Home() {
             Gesundheitsamt melden.
           </p>
         </div>
-        <div className="pt-5 sm:pt-10">
+        <div className="pt-5 sm:pt-10 relative">
+          <div id="praxis" className="-mt-20 absolute top-0" />
           <h2 className="text-center text-2xl sm:text-4xl text-primary">
             Unsere Praxis
           </h2>
-          <div className="mt-5 sm:mt-10">
+          <div className="mt-5">
             <SlideShow />
+          </div>
+          <div className="max-w-screen-md mx-auto px-3 py-5 text-gray-500 flex flex-col gap-2 text-justify">
+            <p>
+              Unsere Praxis hat im Jahr 2023 eine umfassende Renovierung
+              erfahren. Wir sind stolz darauf, Ihnen eine zeitgemäße und
+              einladende Umgebung mit höchstem technischen Standard bieten zu
+              können.
+            </p>
+            <p>
+              Für die kleinen Besucher haben wir eine Kinderspielecke im
+              Wartezimmer eingerichtet, in der sie sich während Ihres Besuchs
+              vergnügen können.
+            </p>
+            <p>
+              Ein barrierefreier Zugang ist uns ein wichtiges Anliegen, daher
+              ist die Praxis mit einem Aufzug erreichbar und behindertengerecht
+              gestaltet. So stellen wir sicher, dass auch Menschen mit
+              eingeschränkter Mobilität mühelos unsere Räumlichkeiten erreichen
+              können.
+            </p>
           </div>
         </div>
         <div className="py-5 relative">
@@ -186,13 +204,16 @@ export default function Home() {
           <ServicesSlider />
         </div>
         <div className="flex flex-col sm:flex-row-reverse">
-          <div className="bg-tertiary w-full sm:w-2/5 p-3 sm:p-6 text-primary font-semibold">
+          <div className="bg-gradient w-full sm:w-2/5 p-3 sm:p-6 text-primary font-semibold">
             <h3 className="text-xl sm:text-3xl text-center sm:text-start">
               Anfahrt
             </h3>
             <p>
-              Unsere Praxis ist mit dem Auto sowie mit dem ÖPNV bestens zu
-              erreichen. Es befinden sich kostenlose Parkmöglichkeiten vor Ort.
+              Für eine Anfahrt mit dem Auto stehen für Sie hinter der Praxis
+              <b className="mx-1">kostenlose Parkplätze</b>zur Verfügung. Die
+              <b className="mx-1">Bushaltestelle Annakirchstraße</b>befindet
+              sich direkt vor dem Praxisgebäude, sodass die Praxis auch mit dem
+              ÖPNV gut erreichbar ist.
             </p>
             <div className="my-5 flex flex-col gap-5">
               <div className="flex items-center gap-2">

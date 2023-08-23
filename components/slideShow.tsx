@@ -16,21 +16,21 @@ export default function SlideShow() {
         showThumbs={false}
         infiniteLoop
         centerMode
-        centerSlidePercentage={66}
+        centerSlidePercentage={100}
         renderArrowPrev={(onClickHandler) => (
           <button
             onClick={onClickHandler}
-            className="absolute top-1/2 left-0 transform -translate-y-1/2 z-10 ml-5 bg-primary p-2 rounded-full"
+            className="absolute top-1/2 left-0 transform -translate-y-1/2 z-10 ml-5 border-2 border-white p-2 rounded"
           >
-            <BsChevronLeft className="stroke-1 text-xl text-white" />
+            <BsChevronLeft className="stroke-1 text-2xl text-white" />
           </button>
         )}
         renderArrowNext={(onClickHandler) => (
           <button
             onClick={onClickHandler}
-            className="absolute top-1/2 right-0 transform -translate-y-1/2 z-10 mr-5 bg-primary p-2 rounded-full"
+            className="absolute top-1/2 right-0 transform -translate-y-1/2 z-10 mr-5 border-2 border-white p-2 rounded"
           >
-            <BsChevronRight className="stroke-1 text-xl text-white" />
+            <BsChevronRight className="stroke-1 text-2xl text-white" />
           </button>
         )}
       >

@@ -42,6 +42,12 @@ export default function Footer() {
       <p className="text-xs text-center md:col-span-2">
         © Facharztpraxis für Hals-,Nasen- und Ohrenheilkunde Dr. med. Wolfram
         Peter Kühn.
+        <span className="block mt-1">
+          Bilder von{' '}
+          <a className="underline" href="https://de.freepik.com/">
+            Freepik
+          </a>
+        </span>
       </p>
     </footer>
   );

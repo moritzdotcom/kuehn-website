@@ -45,7 +45,7 @@ export default function Navbar() {
         </div>
         <div className="hidden md:flex items-center justify-between gap-5 font-semibold text-primary">
           <Link
-            href="#services"
+            href="/#services"
             className="hover:text-secondary hover:underline underline-offset-4"
           >
             Leistungen
@@ -57,7 +57,7 @@ export default function Navbar() {
             Spezialisierung
           </Link>
           <Link
-            href="/praxis"
+            href="/#praxis"
             className="hover:text-secondary hover:underline underline-offset-4"
           >
             Praxis
@@ -70,8 +70,8 @@ export default function Navbar() {
           </Link>
         </div>
         <Link
-          href="#contact"
-          className="bg-gradient text-white pl-3 pr-4 py-3 rounded-lg text-sm font-semibold hidden md:flex items-center gap-2 hover:bg-secondary"
+          href="/#contact"
+          className="bg-gray-500 text-white pl-3 pr-4 py-3 rounded-lg text-sm font-semibold hidden md:flex items-center gap-2 hover:bg-gray-600"
         >
           <FaPhoneAlt className="text-base rotate-6" />
           Kontakt
