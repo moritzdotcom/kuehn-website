@@ -9,18 +9,18 @@ export default function TeamPage() {
         BILD
       </div>
       <div className="mx-1 mb-8">
-        <h1 className="text-2xl sm:text-4xl text-primary my-2 text-center mb-5">
+        <h1 className="text-2xl sm:text-4xl text-primary my-2 text-center mb-8">
           Ihre Ärzte
         </h1>
         <DoctorCard
-          name="Dr. med. Wolfram Kühn"
+          name="Dr. med. Wolfram Peter Kühn"
           image={kuehnImg}
           description="Facharzt für Hals-Nasen-Ohren-Heilkunde"
           qualifications="Stimm- und Sprachstörung, Naturheilverfahren"
         />
         <hr className="my-3" />
         <DoctorCard
-          name="Dr. med. Aline Paulussen"
+          name="Dr. med. Aline Paulußen"
           image={paulussenImg}
           description="Fachärztin für Hals-Nasen-Ohren-Heilkunde"
         />
@@ -45,7 +45,7 @@ function DoctorCard({
       <Image
         src={image}
         alt={name}
-        className="w-full sm:w-1/3 aspect-video h-full object-cover"
+        className="w-full sm:w-1/3 aspect-video h-full object-cover rounded"
       />
       <div className="w-full sm:w-2/3 flex flex-col gap-2">
         <h3 className="text-2xl text-primary">{name}</h3>

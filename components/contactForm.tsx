@@ -1,4 +1,6 @@
+import Link from 'next/link';
 import { FormEvent, useState } from 'react';
+import { FaFax } from 'react-icons/fa';
 import { MdLocalPhone, MdMail } from 'react-icons/md';
 
 type ErrorObject = {
@@ -96,6 +98,10 @@ export default function ContactForm() {
           <MdLocalPhone className="inline mr-4 lg:mr-2" />
           +49 2161 980 890
         </a>
+        <p className="block mt-4 text-xl font-semibold">
+          <FaFax className="inline mr-4 lg:mr-2" />
+          +49 2161 980 8966
+        </p>
         <a
           className="block mt-4 text-xl font-semibold"
           href="mailto:kontakt@hno-kuehn.de"
@@ -168,7 +174,10 @@ export default function ContactForm() {
               <label htmlFor="privacy" className="ml-2">
                 Ich willige in die Verarbeitung meiner Daten zum Zweck der
                 Bearbeitung meiner Anfrage ein und habe die
-                Datenschutzbestimmungen gelesen *
+                <Link href="/privacy" className="mx-1 underline">
+                  Datenschutzbestimmungen
+                </Link>
+                gelesen. *
               </label>
             </div>
             {errors.privacy && <p className="text-red-600">{errors.privacy}</p>}

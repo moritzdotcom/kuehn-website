@@ -46,13 +46,13 @@ export default function Navbar() {
           </button>
         </div>
         <div className="hidden md:flex items-center justify-between gap-5 font-semibold text-primary">
-          <NavLink href="/#services" path={router.asPath}>
+          <NavLink href="/services" path={router.asPath}>
             Leistungen
           </NavLink>
           <NavLink href="/specialization" path={router.asPath}>
             Spezialisierung
           </NavLink>
-          <NavLink href="/#praxis" path={router.asPath}>
+          <NavLink href="/praxis" path={router.asPath}>
             Praxis
           </NavLink>
           <NavLink href="/team" path={router.asPath}>

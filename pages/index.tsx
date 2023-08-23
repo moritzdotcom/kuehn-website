@@ -4,13 +4,13 @@ import Image from 'next/image';
 import WelcomeDesktop from '@/public/images/welcomeDesktop.jpg';
 import WelcomeMobile from '@/public/images/welcomeMobile.jpg';
 import SlideShow from '@/components/slideShow';
-import ServicesSlider from '@/components/servicesSlider';
+import ServicesGrid from '@/components/servicesGrid';
 import { FaBus, FaCar } from 'react-icons/fa';
 import { IoMdTrain } from 'react-icons/io';
 import ContactForm from '@/components/contactForm';
 
 export default function Home() {
-  const title = 'Praxis Dr. Wolfram Kühn';
+  const title = 'Praxis Dr. Wolfram Peter Kühn';
   const description =
     'Facharztpraxis für Hals-, Nasen- Ohrenheilkunde in Mönchengladbach-Windberg.';
   const favicon = '/favicon.ico';
@@ -42,13 +42,20 @@ export default function Home() {
         <OpeningTimesBanner />
         <div
           className="bg-cover bg-center relative z-10"
-          style={{ backgroundImage: 'url(/images/services/ears.jpg)' }}
+          style={{ backgroundImage: 'url(/images/services/nose.jpg)' }}
         >
           <div className="bg-white bg-opacity-70 absolute inset-0 -z-10"></div>
           <header className="flex flex-col sm:flex-row-reverse items-center justify-center gap-1 sm:gap-5 px-3 py-5 z-30">
-            <div className="max-w-xl text-center sm:text-start flex flex-col items-center sm:items-start my-4 sm:my-12">
+            <div className="max-w-xl text-center flex flex-col items-center my-4 sm:my-12">
               <h1 className="font-bold text-xl sm:text-4xl text-primary">
-                Facharztpraxis für Hals-, Nasen- Ohrenheilkunde
+                Facharztpraxis für
+                <br />
+                Hals-, Nasen- Ohrenheilkunde
+              </h1>
+              <h1 className="font-bold text-lg sm:text-2xl text-primary mt-1">
+                Stimm- und Sprachstörungen
+                <br />
+                Naturheilverfahren
               </h1>
               <h2 className="text-gray-500 font-semibold text-lg sm:text-2xl mt-5">
                 in Mönchengladbach-Windberg.
@@ -71,13 +78,17 @@ export default function Home() {
               </div>
               <div className="px-2 sm:px-5 py-2 sm:py-5 sm:w-2/3 flex flex-col gap-2.5 text-sm md:text-base text-gray-700 font-semibold">
                 <p>
-                  Liebe Patientinnen, liebe Patienten,
+                  <span className="text-xl">
+                    Liebe Patientinnen, liebe Patienten,
+                  </span>
+                  <br />
                   <br /> Herzlich willkommen auf der Internetseite unserer
                   HNO-Praxis!
                 </p>
                 <p>
-                  Unser Team besteht aus zwei erfahrenen HNO-Fachärzten und
-                  einem engagierten Praxisteam. Wir legen großen Wert auf eine
+                  Unser Team besteht aus zwei erfahrenen HNO-Fachärzten, Dr.
+                  med. Wolfram Peter Kühn und Dr. med. Aline Paulußen, und einem
+                  engagierten Praxisteam. Wir legen großen Wert auf eine
                   persönliche und einfühlsame Betreuung, um Ihre individuellen
                   Bedürfnisse bestmöglich zu erfüllen.
                 </p>
@@ -88,16 +99,15 @@ export default function Home() {
                   und schonende Diagnostik- und Therapieverfahren im Fokus.
                 </p>
                 <p>Wir freuen uns auf Ihren Besuch!</p>
-                <p>
-                  Dr. med. Wolfram Kühn, Dr. med. Aline Paulussen und das
-                  Praxisteam Kühn
+                <p style={{ fontFamily: 'cursive' }}>
+                  Ihr Praxisteam Dr. Kühn / Dr. Paulußen
                   <br />
                 </p>
               </div>
             </div>
           </div>
         </div>
-        <div className="w-full bg-gradient text-gray-900 sm:-mt-36 sm:pt-36 sm:-mb-24 sm:pb-24">
+        <div className="w-full bg-gradient text-gray-900 sm:-mt-36 sm:pt-36 sm:-mb-12 sm:pb-12">
           <div className="max-w-5xl mx-auto px-3 py-5 sm:py-20 flex flex-col gap-6 sm:gap-10">
             <h2 className="text-2xl font-semibold text-center">
               Terminsprechstunde
@@ -107,7 +117,7 @@ export default function Home() {
                 <h6 className="font-semibold text-gray-900">Montag</h6>
                 <div>
                   <p>8:30 - 12:00 Uhr</p>
-                  <p>14:30 - 18:00 Uhr</p>
+                  <p>14:30 - 17:00 Uhr</p>
                 </div>
               </div>
               <div className="flex sm:flex-col gap-3 justify-between sm:justify-start items-center">
@@ -127,7 +137,7 @@ export default function Home() {
                 <h6 className="font-semibold text-gray-900">Donnerstag</h6>
                 <div>
                   <p>8:30 - 12:00 Uhr</p>
-                  <p>14:30 - 18:00 Uhr</p>
+                  <p>14:30 - 17:00 Uhr</p>
                 </div>
               </div>
               <div className="flex sm:flex-col gap-3 justify-between sm:justify-start items-center">
@@ -138,13 +148,14 @@ export default function Home() {
               </div>
             </div>
             <h5 className="text-center text-lg font-light">
-              Die <b className="font-extrabold">offene Notfall Sprechstunde</b>{' '}
-              ist vormittags um <b className="font-extrabold">8.30 Uhr</b> und
-              Mo, Di, und Do um <b className="font-extrabold">14.30 Uhr</b>.
+              Die <b className="font-extrabold">offene Sprechstunde</b> ist
+              vormittags um <b className="font-extrabold">8:30 - 9:30 Uhr</b>{' '}
+              und Mo, Di, und Do um{' '}
+              <b className="font-extrabold">14:30 - 15:30 Uhr</b>.
             </h5>
           </div>
         </div>
-        <div className="bg-gray-100 sm:rounded-lg sm:shadow-lg w-full max-w-5xl mx-auto flex flex-col gap-4 sm:gap-6 text-center text-sm sm:text-base px-3 py-5">
+        <div className="bg-gray-100 sm:rounded-lg sm:shadow-lg w-full max-w-5xl mx-auto flex flex-col gap-4 sm:gap-6 text-center text-sm sm:text-lg px-3 py-5">
           <p>
             In dringenden Fällen außerhalb der Sprechstundenzeiten erreichen Sie
             unter{' '}
@@ -157,14 +168,6 @@ export default function Home() {
               112
             </a>{' '}
             den Rettungsdienst der Feuerwehr.
-          </p>
-          <p>
-            Bei Erkältungssymptomen ist ein negativer Schnelltest erwünscht.
-          </p>
-          <p>
-            Bei Verdacht auf eine Corona-Infektion sollten sich Betroffene
-            ausschließlich telefonisch bei uns,oder direkt beim nächstgelegenen
-            Gesundheitsamt melden.
           </p>
         </div>
         <div className="pt-5 sm:pt-10 relative">
@@ -201,11 +204,11 @@ export default function Home() {
           <h2 className="text-center text-2xl sm:text-4xl text-primary">
             Unsere Leistungen
           </h2>
-          <ServicesSlider />
+          <ServicesGrid />
         </div>
         <div className="flex flex-col sm:flex-row-reverse">
           <div className="bg-gradient w-full sm:w-2/5 p-3 sm:p-6 text-primary font-semibold">
-            <h3 className="text-xl sm:text-3xl text-center sm:text-start">
+            <h3 className="text-xl sm:text-3xl text-center sm:text-start mb-2">
               Anfahrt
             </h3>
             <p>

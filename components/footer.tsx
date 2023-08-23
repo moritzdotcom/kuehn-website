@@ -1,4 +1,4 @@
-import { FaPhoneAlt } from 'react-icons/fa';
+import { FaFax, FaPhoneAlt } from 'react-icons/fa';
 import { MdLocationPin } from 'react-icons/md';
 import { IoMdMail } from 'react-icons/io';
 import Link from 'next/link';
@@ -11,13 +11,22 @@ export default function Footer() {
           <div>
             <MdLocationPin className="text-xl" />
           </div>
-          <p>Lindenstraße 260, 41063 Mönchengladbach</p>
+          <p>
+            Lindenstraße 260
+            <br /> 41063 Mönchengladbach
+          </p>
         </div>
         <div className="flex items-center gap-2">
           <div>
             <FaPhoneAlt className="rotate-6" />
           </div>
           <a href="tel:+49 2161 980 890">+49 2161 980 890</a>
+        </div>
+        <div className="flex items-center gap-2">
+          <div>
+            <FaFax />
+          </div>
+          <a href="tel:+49 2161 980 890">+49 2161 980 8966</a>
         </div>
         <div className="flex items-center gap-2">
           <div>
@@ -40,7 +49,8 @@ export default function Footer() {
         </Link>
       </div>
       <p className="text-xs text-center md:col-span-2">
-        © Facharztpraxis für Hals-,Nasen- und Ohrenheilkunde Dr. med. Wolfram
+        © Facharztpraxis für Hals-,Nasen- und Ohrenheilkunde
+        <br /> Stimm- und Sprachstörungen Naturheilverfahren Dr. med. Wolfram
         Peter Kühn.
         <span className="block mt-1">
           Bilder von{' '}
