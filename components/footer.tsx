@@ -35,7 +35,7 @@ export default function Footer() {
           <a href="mailto:kontakt@hno-kuehn.de">kontakt@hno-kuehn.de</a>
         </div>
       </div>
-      <div className="flex md:flex-col flex-wrap items-center justify-center gap-1 md:gap-3 md:place-self-end text-start text-sm">
+      <div className="flex md:flex-col flex-wrap items-center justify-center md:justify-start gap-1 md:gap-3 md:justify-self-end text-start text-sm">
         <Link className="md:w-full" href="/">
           Startseite
         </Link>

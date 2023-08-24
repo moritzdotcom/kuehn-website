@@ -1,5 +1,7 @@
 import Image from 'next/image';
 import EarsImage from '@/public/images/services/ears.jpg';
+import TalkImage from '@/public/images/specializations/talk.jpg';
+import HearImage from '@/public/images/specializations/hear.jpg';
 
 export default function SpecializationPage() {
   return (
@@ -24,9 +26,11 @@ export default function SpecializationPage() {
         </p>
         <div className="grid grid-cols-1 md:grid-cols-2 gap-5 mt-5">
           <section>
-            <div className="w-full aspect-video bg-gray-300 flex items-center justify-center text-white font-bold text-3xl rounded">
-              BILD
-            </div>
+            <Image
+              src={TalkImage}
+              alt="Stimm- und Sprachstörungen"
+              className="w-full aspect-video rounded object-cover"
+            />
             <div className="mx-3 flex flex-col gap-3">
               <h3 className="text-xl text-primary my-2 text-center">
                 Stimm- und Sprachstörungen:
@@ -55,9 +59,11 @@ export default function SpecializationPage() {
             </div>
           </section>
           <section>
-            <div className="w-full aspect-video bg-gray-300 flex items-center justify-center text-white font-bold text-3xl rounded">
-              BILD
-            </div>
+            <Image
+              src={HearImage}
+              alt="Zentrale Fehlhörigkeit bei Kindern"
+              className="w-full aspect-video rounded object-cover"
+            />
             <div className="mx-3 flex flex-col gap-3">
               <h3 className="text-xl text-primary my-2 text-center">
                 Zentrale Fehlhörigkeit bei Kindern:

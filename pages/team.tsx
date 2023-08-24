@@ -1,13 +1,16 @@
 import Image, { StaticImageData } from 'next/image';
 import kuehnImg from '@/public/images/team/kuehn.jpg';
 import paulussenImg from '@/public/images/team/paulussen.jpg';
+import TeamImg from '@/public/images/team/team.jpg';
 
 export default function TeamPage() {
   return (
     <main className="w-full max-w-screen-lg mx-auto mt-3">
-      <div className="w-full aspect-video bg-gray-300 flex items-center justify-center text-white font-bold text-3xl">
-        BILD
-      </div>
+      <Image
+        src={TeamImg}
+        alt="Team"
+        className="w-full aspect-video rounded object-cover"
+      />
       <div className="mx-1 mb-8">
         <h1 className="text-2xl sm:text-4xl text-primary my-2 text-center mb-8">
           Ihre Ärzte
